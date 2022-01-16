@@ -1,10 +1,17 @@
 <html lang="en">
 <head>
     <title>My Page</title>
+    <style>h1 { color:red;} body {margin:100px;} .hidden {display: none};</style>
+    <script type="text/javascript">
+        function ShowDesc() {
+            document.getElementById('shortdesc').className="hidden";
+            document.getElementById('longdesc').className="";
+            }
+    </script>
 </head>
 <body>
     <h1>This is my page!</h1>
-    <p>And this is my <strong>content</strong></p>
-    <p>I hope you <em>like it!</em></p>
+    <p id="shortdesc">This is my short description, <a href="#" onclick="ShowDesc()">click to see a longer one</a></p>
+    <p id="longdesc" class="hidden">This is the long description, it is super interesting and much much longer than the other one that was there before</p>
 </body>
 </html>
